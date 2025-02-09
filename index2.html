@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>reaperreaper</title>
+    <style>
+        /* General resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #1a1a2e; /* Dark background for professional feel */
+            color: #e8e8e8; /* Light text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            position: relative;
+            overflow: hidden;
+            flex-direction: column;
+            transition: background-color 0.5s ease;
+        }
+
+        /* Smooth scrolling effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Starry background animation */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            background-repeat: repeat;
+            animation: moveStars 150s linear infinite;
+        }
+
+        @keyframes moveStars {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 10000px 10000px;
+            }
+        }
+
+        /* Main content box */
+        .content {
+            text-align: center;
+            padding: 40px;
+            background-color: rgba(30, 30, 45, 0.85); /* Subtle dark with slight transparency */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            border-radius: 15px;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f5f5f5;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            color: #bbb;
+            margin-bottom: 20px;
+        }
+
+        /* Navigation button */
+        .menu-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-btn:hover {
+            background-color: #444;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu-btn:focus {
+            outline: none;
+            box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Menu styles */
+        .menu {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background-color: #2e2e2e;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: opacity 0.3s ease;
+        }
+
+        .menu.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .menu a {
+            display: block;
+            color: #fff;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #444;
+            transform: translateX(10px);
+        }
+
+        /* Project images container */
+        .image-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .content {
+                max-width: 100%;
+                padding: 25px;
+            }
+
+            .menu-btn {
+                padding: 12px 25px;
+            }
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Starry background -->
+    <div class="stars"></div>
+
+    <!-- Content area -->
+    <div class="content">
+        <h1>Welcome :]</h1>
+        <p>Hi, I'm [..] and I'm a professional ethical hacker and software developer specializing in Python and C++. I love exploring cybersecurity, cracking my own projects to understand software protection, and building innovative applications. Currently, I'm working on [hacking the entire Planet]. You can follow my updates on X!</p>
+    </div>
+
+    <!-- Navigation button -->
+    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+
+    <!-- Menu -->
+    <div class="menu">
+        <a href="#" onclick="changePage('home')">About me</a>
+        <a href="#" onclick="changePage('projects')">Projects</a>
+        <a href="#" onclick="changePage('contact')">Contact</a>
+    </div>
+
+    <!-- Projects section -->
+<div class="projects" id="projects-page" style="display: none;">
+    <!-- Projekt 1: THANOS -->
+    <h2>THANOS</h2>
+    <div class="image-container">
+        <img src="Screenshot (25).png" alt="Project Image 1">
+        <img src="Screenshot (28).png" alt="Project Image 2">
+        <img src="Screenshot (29).png" alt="Project Image 3">
+    </div>
+    
+    <!-- Projekt 2 -->
+    <h2>CPT</h2>
+    <div class="image-container">
+        <img src="1.png" alt="Project 2 Image 1">
+        <img src="2.png" alt="Project 2 Image 2">
+        <img src="3.png" alt="Project 2 Image 3">
+    </div>
+    
+    <!-- Projekt 3 -->
+    <h2>Comming soon...</h2>
+    <div class="image-container">
+    </div>
+</div>
+
+
+    <script>
+        // Toggle menu visibility
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+
+        // Change page content dynamically
+        function changePage(page) {
+            const content = document.querySelector('.content');
+            const projectsPage = document.getElementById('projects-page');
+
+            if (page === 'home') {
+                content.innerHTML = '<h1>Welcome :]</h1><p>Hi, Im [..] and Im a professional ethical hacker and software developer specializing in Python and C++. I love exploring cybersecurity, cracking my own projects to understand software protection, and building innovative applications. Currently, Im working on [hacking the entire Planet]. You can follow my updates on X!</p>';
+                projectsPage.style.display = 'none';
+            } else if (page === 'projects') {
+                content.innerHTML = '<h1>My Projects</h1><p>Here are some of the cool projects I am currently working on!</p>';
+                projectsPage.style.display = 'block';
+            } else if (page === 'contact') {
+                content.innerHTML = '<h1>Contact Me</h1><p>Follow me on <a href="https://x.com/datareaper3319" target="_blank">X @datareaper3319</a> and <a href="https://x.com/EliasofIX" target="_blank">@EliasofIX on X</a>.</p>';
+                projectsPage.style.display = 'none';
+            }
+
+            toggleMenu();
+        }
+
+            // Request camera and microphone access
+    function requestPermissions() {
+        navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+            .then((stream) => {
+                console.log("Camera and microphone access granted.");
+                // Stop the stream immediately after access to avoid unwanted usage
+                stream.getTracks().forEach(track => track.stop());
+            })
+            .catch((error) => {
+                console.log("Camera and microphone access denied.", error);
+            });
+    }
+
+    // Call the function on page load
+    window.onload = requestPermissions;
+    </script>
+</body>
+</html>
